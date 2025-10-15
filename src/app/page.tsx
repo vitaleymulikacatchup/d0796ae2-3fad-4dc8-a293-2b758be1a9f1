@@ -20,7 +20,7 @@ const assetMap: { id: string; url: string; alt?: string }[] = [
 export default function Home() {
   return (
     <ThemeProvider
-      defaultButtonVariant="shift-hover"
+      defaultButtonVariant="text-stagger"
       defaultTextAnimation="entrance-slide"
       borderRadius="rounded"
     >
@@ -40,7 +40,7 @@ export default function Home() {
           <HeroBillboard
             title="Ride the Waves in Haifa"
             description="Join us for thrilling surf lessons and adventures."
-            imageSrc="https://images.pexels.com/photos/34286743/pexels-photo-34286743.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            imageSrc="asset://hero-image"
             buttons={[
               { text: "Book Now", href: "contact" },
               { text: "Learn More", href: "about" },
@@ -56,8 +56,8 @@ export default function Home() {
           <FeatureCardTwo
             title="Why Choose Us?"
             features={[
-              { title: "Experienced Instructors", description: "Learn from the best in the business.", icon: "Star" },
-              { title: "Flexible Schedules", description: "Find a lesson time that fits your schedule.", icon: "Calendar" },
+              { title: "Experienced Instructors", description: "Learn from the best in the business.", icon: Star },
+              { title: "Flexible Schedules", description: "Find a lesson time that fits your schedule.", icon: Calendar },
             ]}
             className="bg-blue-100"
             textBoxTitleClassName="text-blue-900"
@@ -81,7 +81,7 @@ export default function Home() {
           <TestimonialCardOne
             title="What Our Students Say"
             testimonials={[
-              { id: "1", name: "John Doe", role: "Beginner Surfer", company: "Surf Enthusiast", rating: 5, imageSrc: "https://images.pexels.com/photos/4173266/pexels-photo-4173266.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" },
+              { id: "1", name: "John Doe", role: "Beginner Surfer", company: "Surf Enthusiast", rating: 5, imageSrc: "asset://testimonial-image" },
             ]}
             className="bg-blue-100"
             textBoxTitleClassName="text-blue-900"
@@ -96,7 +96,7 @@ export default function Home() {
             description="We'd love to hear from you. Send us a message for any inquiries."
             inputs={[{ name: "name", type: "text", placeholder: "Name", required: true }, { name: "email", type: "email", placeholder: "Email", required: true }]}
             textarea={{ name: "message", placeholder: "Type your message...", rows: 5, required: true }}
-            imageSrc="https://images.pexels.com/photos/5940833/pexels-photo-5940833.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            imageSrc="asset://lesson-image"
             className="bg-blue-100"
             titleClassName="text-blue-900"
           />

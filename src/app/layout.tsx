@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from '@/providers/ThemeProvider';
 import { Inter_Tight, Playfair_Display, Roboto, Open_Sans, Lato, Montserrat, Poppins, Raleway, Ubuntu, Nunito } from "next/font/google";
 import "./globals.css";
 
@@ -85,12 +86,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${interTight.variable} ${playfairDisplay.variable} ${roboto.variable} ${openSans.variable} ${lato.variable} ${montserrat.variable} ${poppins.variable} ${raleway.variable} ${ubuntu.variable} ${nunito.variable} antialiased`}
-      >
-        {children}
-      
+    <ThemeProvider defaultButtonVariant="text-stagger" defaultTextAnimation="entrance-slide" borderRadius="rounded">
+      <html lang="en">
+        <body
+          className={`${interTight.variable} ${playfairDisplay.variable} ${roboto.variable} ${openSans.variable} ${lato.variable} ${montserrat.variable} ${poppins.variable} ${raleway.variable} ${ubuntu.variable} ${nunito.variable} antialiased`}
+        >
+          {children}
+        
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -929,6 +931,7 @@ export default function RootLayout({
           }}
         />
       </body>
-    </html>
+      </html>
+    </ThemeProvider>
   );
 }
