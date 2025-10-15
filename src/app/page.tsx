@@ -7,6 +7,7 @@ import TextAbout from '@/components/sections/about/TextAbout';
 import TestimonialCardOne from '@/components/sections/testimonial/TestimonialCardOne';
 import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
+import { Star, Calendar } from 'lucide-react';
 
 const assetMap: { id: string; url: string; alt?: string }[] = [
   { "id": "hero-image", "url": "https://images.pexels.com/photos/34286743/pexels-photo-34286743.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "alt": "Two kitesurfers set up their kite on a sandy beach during sunset, with soft light and gentle waves." },
